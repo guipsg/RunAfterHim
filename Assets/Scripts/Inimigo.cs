@@ -4,29 +4,20 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour {
 
-    public int healthEnemy = 2;
-    public GameObject parent;
-	public GameObject deathParticle;
-    void Update()
-    {
-        if (healthEnemy <= 0)
-        {
-            Destroy(parent);
-			Instantiate (deathParticle, transform.position, transform.rotation);
-        }
+    [SerializeField] private float jumpHeight = 300f;
+    [SerializeField] private GameObject parent;
+    [SerializeField] private GameObject deathParticle;
 
-    }
     void OnCollisionEnter2D(Collision2D col)
     {
 
         if (col.gameObject.CompareTag("Player"))
         {
-            healthEnemy -= 2;
+            col.gameObject.GetComponent<PlayerMovementPrototype>().Jump(jumpHeight);
+            Destroy(parent, 0.1f);
+            Instantiate(deathParticle, transform.position, transform.rotation);
         }
-        if (col.gameObject.CompareTag("Ball"))
-        {
-            healthEnemy -= 1;
-        }
+
 
     }
 

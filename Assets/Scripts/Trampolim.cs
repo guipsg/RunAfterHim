@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Trampolim : MonoBehaviour {
 
-    public Rigidbody2D rb;
-    public float jumpforce = 300f;
-    public Animator an;
+    [SerializeField]private float jumpHeight = 300f;
+    [SerializeField]private Animator an;
     void OnTriggerStay2D(Collider2D c)
     {
 
@@ -14,7 +13,7 @@ public class Trampolim : MonoBehaviour {
 
         {
             an.SetBool("Activated", true);
-            rb.AddForce(Vector2.up * jumpforce);
+            c.gameObject.GetComponent<PlayerMovementPrototype>().Jump(jumpHeight);
 
         }
 

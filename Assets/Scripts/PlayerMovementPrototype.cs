@@ -47,17 +47,17 @@ public class PlayerMovementPrototype : MonoBehaviour {
         }
         an.SetBool("Grounded", grounded);
         //PULO
-
+        if (grounded)
+        {
+            an.SetBool("Jumping", false);
+        }
         grounded = Physics2D.Linecast(feetSensor.transform.position, groundSensor.transform.position, 1 << LayerMask.NameToLayer("Ground"));
 
         Debug.DrawLine(feetSensor.transform.position, groundSensor.transform.position);
 
         if (grounded && Input.GetButtonDown("Jump"))
         {
-            rb.AddForce (Vector2.up * jumpForce);
-            grounded = !grounded;
-            cont += 1;
-			an.SetTrigger("Jumped");
+            Jump(jumpForce);
         }
 
         if (!canMove && grounded && cont >= 1)
@@ -93,6 +93,14 @@ public class PlayerMovementPrototype : MonoBehaviour {
             audioSource.PlayOneShot(crystalClip, 0.5f);
         }
     }
-
+    public void Jump(float jumpheight)
+    {
+        rb.velocity = Vector2.zero;
+        rb.AddForce(Vector2.up * jumpheight);
+        cont += 1;
+        an.SetTrigger("Jumped");
+        an.SetBool("Jumping",true);
+        JumpSfx();
+    }
     public void JumpSfx() { audioSource.PlayOneShot(jumpClip, 1f); }
 }

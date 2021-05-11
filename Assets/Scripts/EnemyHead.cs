@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyHead : MonoBehaviour {
 
-    public Rigidbody2D rb;
     public float jumpHeight = 800f;
 
     void OnCollisionEnter2D(Collision2D c)
@@ -13,9 +12,7 @@ public class EnemyHead : MonoBehaviour {
         if (c.gameObject.CompareTag("Player"))
 
         {
-
-            rb.AddForce(Vector2.up * jumpHeight);
-
+            c.gameObject.GetComponent<PlayerMovementPrototype>().Jump(jumpHeight);
         }
 
     }
