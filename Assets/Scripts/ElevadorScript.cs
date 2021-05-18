@@ -8,17 +8,11 @@ public class ElevadorScript : MonoBehaviour {
 
     [SerializeField] private PlayerMovementPrototype player;
     [SerializeField] private string nextLevel;
-    [SerializeField] private int cont = 0;
-	// Use this for initialization
-	void Start () {
-		
-	}
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player")){
                 player.canMove = false;
-                player.cont = 0;
                 player.Flip();
                 player.rb.velocity = new Vector2(0f, 0f);
                 player.velocity = 0;

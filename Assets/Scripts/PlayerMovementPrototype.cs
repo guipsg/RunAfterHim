@@ -10,6 +10,7 @@ public class PlayerMovementPrototype : MonoBehaviour {
     [SerializeField] private GameObject groundSensor;
     [SerializeField] private ParticleSystem runningParticle;
 
+    [SerializeField] private float groundCheckRadius;
     [SerializeField] private float jumpForce;
     [SerializeField] private float _velocity;
     [SerializeField] private int _cont = 0;
@@ -45,11 +46,7 @@ public class PlayerMovementPrototype : MonoBehaviour {
 
         transform.position = mg.checkPoint;
     }
-	void Start(){
 
-
-	}
-    // Update is called once per frame
     void Update () {
 		var em = runningParticle.emission;
         //CORRIDA
@@ -61,11 +58,11 @@ public class PlayerMovementPrototype : MonoBehaviour {
         {
             an.SetBool("Running", true);
 			em.enabled = true;
-        }else
+        }
+        if(!canMove || !grounded)
         {
 			em.enabled = false;
             an.SetBool("Running", false);
-			
         }
         an.SetBool("Grounded", grounded);
         //PULO
@@ -73,7 +70,8 @@ public class PlayerMovementPrototype : MonoBehaviour {
         {
             an.SetBool("Jumping", false);
         }
-        grounded = Physics2D.Linecast(feetSensor.transform.position, groundSensor.transform.position, 1 << LayerMask.NameToLayer("Ground"));
+        grounded = grounded = Physics2D.Linecast(feetSensor.transform.position, groundSensor.transform.position, 1 << LayerMask.NameToLayer("Ground")) ||
+                                  Physics2D.OverlapCircle(feetSensor.transform.position, groundCheckRadius, 1 << LayerMask.NameToLayer("Ground"));
 
         Debug.DrawLine(feetSensor.transform.position, groundSensor.transform.position);
 
@@ -82,10 +80,7 @@ public class PlayerMovementPrototype : MonoBehaviour {
             Jump(jumpForce);
         }
 
-        if (!canMove && grounded && cont >= 1)
-        {
-            canMove = true;
-        }
+        
     }
 
     public void Flip(){
