@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ColetavelScript : MonoBehaviour {
 
-    public PontosScript pt;
-	public GameObject particle;
+    [SerializeField] private PontosScript pt;
+    [SerializeField] private GameObject particle;
 
     private void OnTriggerEnter2D(Collider2D col)
     {

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorScript : MonoBehaviour {
-    float velocity = 0f;
-    public float vel;
-    public float time;
-    public float timeleft;
-    bool isOpen;
+    [SerializeField] private float velocity = 0f;
+    [SerializeField] private float vel;
+    [SerializeField] private float time;
+    [SerializeField] private float timeleft;
+    [SerializeField] private bool isOpen;
 
     private void Update()
     {

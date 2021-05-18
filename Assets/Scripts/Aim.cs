@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class Aim : MonoBehaviour {
 
-    [SerializeField] float speed;
+    [SerializeField] private float speed;
 
-    SpriteRenderer sprtR;
+    private SpriteRenderer sprtR;
 
-    [SerializeField] float force;
-    float direcX;
-    float direcY;
+    [SerializeField] private float force;
+    private float direcX;
+    private float direcY;
 
-    bool pressed;
+    private bool pressed;
 
-    Vector2 startPoint;
-    Vector2 moveDelta;
+    private Vector2 startPoint;
+    private Vector2 moveDelta;
 
-    public Transform myPos;
-    public Transform player;
+    [SerializeField] private Transform myPos;
+    [SerializeField] private Transform player;
 
-    public GameObject kunai;
-    public GameObject kunaiGun;
+    [SerializeField] private GameObject kunai;
+    [SerializeField] private GameObject kunaiGun;
 
     void Start()
     {

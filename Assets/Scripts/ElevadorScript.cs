@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class ElevadorScript : MonoBehaviour {
 
-    public PlayerMovementPrototype player;
-    public string nextLevel;
-    int cont = 0;
+    [SerializeField] private PlayerMovementPrototype player;
+    [SerializeField] private string nextLevel;
+    [SerializeField] private int cont = 0;
 	// Use this for initialization
 	void Start () {
 		

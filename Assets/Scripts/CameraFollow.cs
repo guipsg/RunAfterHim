@@ -2,12 +2,12 @@
 
 public class CameraFollow : MonoBehaviour {
 
-    public Transform player;
+	[SerializeField] private Transform player;
 
-    [SerializeField] float speed;
-	[SerializeField] float limitX;
+    [SerializeField] private float speed;
+	[SerializeField] private float limitX;
 
-    public Vector3 offset;
+    [SerializeField] private Vector3 offset;
 
     private void FixedUpdate()
     {

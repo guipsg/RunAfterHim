@@ -41166,16 +41166,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77baea021a0b4424ba20761daa5ea86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1629396069}
+  mg: {fileID: 0}
+  _rb: {fileID: 1629396069}
   an: {fileID: 1629396075}
   feetSensor: {fileID: 384047256}
   groundSensor: {fileID: 22079474}
   runningParticle: {fileID: 464335329}
   jumpForce: 500
-  velocity: 5
-  canMove: 1
-  cont: 0
-  stopped: 0
+  _velocity: 5
+  _cont: 0
+  _canMove: 1
   audioSource: {fileID: 1629396077}
   jumpClip: {fileID: 8300000, guid: 3cb0aa6fc3f5b704b9ee6187fd1db9d2, type: 3}
   enemyDamageClip: {fileID: 8300000, guid: 1d81fdaafe10754479b84e5bc5deaed8, type: 3}
@@ -41214,7 +41214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35ceb73b836cd148916ccddbdbeb0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  _health: 2
   rs: {fileID: 238773312}
 --- !u!114 &1629396074
 MonoBehaviour:

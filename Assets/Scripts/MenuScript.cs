@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
-    public Animator an1;
-    public Animator an2;
-    public string nextLevel;
+    [SerializeField] private Animator an1;
+    [SerializeField] private Animator an2;
+    [SerializeField] private string nextLevel;
     public void StartAnim(){
         an1.SetTrigger("Incoming");
     }

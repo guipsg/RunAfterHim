@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class ChaoFake : MonoBehaviour {
 
-    public GameObject chaofalso;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField] private GameObject chaofalso;
 
     void OnCollisionEnter2D(Collision2D col)
     {

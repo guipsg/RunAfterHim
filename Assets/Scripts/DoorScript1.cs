@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorScript1 : MonoBehaviour {
 
-    public Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
     private void Start()
     {
         rb.gravityScale = 0;

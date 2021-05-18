@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class ParallaxBackground : MonoBehaviour
 {
-	public ParallaxCamera parallaxCamera;
+	[SerializeField] private ParallaxCamera parallaxCamera;
 	List<ParallaxLayer> parallaxLayers = new List<ParallaxLayer>();
 
 	void Start()

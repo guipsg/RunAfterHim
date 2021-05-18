@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class PontosScript : MonoBehaviour {
 
-    public int points;
+    [SerializeField] private int _points;
 
-    public Text pointsText;
-
+    public int points
+    {
+        get { return _points; }
+        set { _points = value; }
+    }
+    [SerializeField] private Text pointsText;
     private void Update()
     {
         pointsText.text = (""+points);

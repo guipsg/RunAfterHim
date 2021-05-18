@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHead : MonoBehaviour {
 
-    public float jumpHeight = 800f;
+    [SerializeField] private float jumpHeight = 800f;
 
     void OnCollisionEnter2D(Collision2D c)
     {

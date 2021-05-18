@@ -5,8 +5,13 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
-    public int health = 2;
-    public RespawnScene rs;
+    [SerializeField] private int _health = 2;
+    [SerializeField] private RespawnScene rs;
+    public int health
+    {
+        get { return _health; }
+        set { _health = value; }
+    }
     void Update() {
         if (health <= 0)
 	    {

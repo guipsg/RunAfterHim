@@ -5,9 +5,9 @@ using UnityEngine;
 public class DoorTrigger : MonoBehaviour {
 
     // Use this for initialization
-    public DoorScript door;
-    public Animator an;
-	public GameObject particle;
+    [SerializeField] private DoorScript door;
+    [SerializeField] private Animator an;
+	[SerializeField] private GameObject particle;
 
     void OnTriggerEnter2D(Collider2D other)
     {

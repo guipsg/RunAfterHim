@@ -4,11 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class Management : MonoBehaviour {
     private static Management instance;
-    public AudioSource asd;
-    public Vector2 checkPoint;
-    public bool isMenu = false;
-	// Use this for initialization
-	void Awake () {
+    [SerializeField] private AudioSource asd;
+    [SerializeField] private Vector2 _checkPoint;
+    [SerializeField] private bool isMenu = false;
+
+    public Vector2 checkPoint
+    {
+        get { return _checkPoint; }
+        set { _checkPoint = value; }
+    }
+    // Use this for initialization
+    void Awake () {
 
             if (instance == null)
             {

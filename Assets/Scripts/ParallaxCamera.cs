@@ -6,7 +6,12 @@ using UnityEngine;
 public class ParallaxCamera : MonoBehaviour 
 {
 	public delegate void ParallaxCameraDelegate(float deltaMovement);
-	public ParallaxCameraDelegate onCameraTranslate;
+	[SerializeField] private ParallaxCameraDelegate _onCameraTranslate;
+	public ParallaxCameraDelegate onCameraTranslate
+    {
+		get { return _onCameraTranslate; }
+		set { _onCameraTranslate = value; }
+    }
 	private float oldPosition;
 	void Start()
 	{

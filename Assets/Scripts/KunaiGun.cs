@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class KunaiGun : MonoBehaviour {
 
-
-
-	public GameObject crosshair;
-
-	void Awake () {
-    }
-
-    // Update is called once per frame
+	[SerializeField] private GameObject crosshair;
     void Update() {
-
 		Vector3 pos = crosshair.transform.position;
 		Vector3 dir = pos - transform.position;
 		float angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg;

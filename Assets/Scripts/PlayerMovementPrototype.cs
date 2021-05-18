@@ -3,20 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementPrototype : MonoBehaviour {
-    private Management mg;
-    public Rigidbody2D rb;
-    public Animator an;
-    [SerializeField] GameObject feetSensor;
-    [SerializeField] GameObject groundSensor;
-	public ParticleSystem runningParticle;
-    public float jumpForce;
-    public float velocity;
-    public bool canMove = false;
-    bool grounded = false;
-    public int cont = 0;
-    public bool stopped = false;
-    public AudioSource audioSource;
-    public AudioClip jumpClip,enemyDamageClip,buttonClip,crystalClip;
+    [SerializeField] private Management mg;
+    [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private Animator an;
+    [SerializeField] private GameObject feetSensor;
+    [SerializeField] private GameObject groundSensor;
+    [SerializeField] private ParticleSystem runningParticle;
+
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float _velocity;
+    [SerializeField] private int _cont = 0;
+    [SerializeField] private bool _canMove = false;
+    private bool grounded = false;
+    private bool stopped = false;
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip jumpClip,enemyDamageClip,buttonClip,crystalClip;
+    public float velocity
+    {
+        get { return _velocity; }
+        set { _velocity = value; }
+    }
+    public Rigidbody2D rb
+    {
+        get { return _rb; }
+        set { _rb = value; }
+    }
+    public bool canMove
+    {
+        get { return _canMove; }
+        set { _canMove = value; }
+    }
+    public int cont
+    {
+        get { return _cont; }
+        set { _cont = value; }
+    }
     private void Awake()
     {
         mg = GameObject.FindGameObjectWithTag("Manager").GetComponent<Management>();

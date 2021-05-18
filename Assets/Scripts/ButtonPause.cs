@@ -6,20 +6,12 @@ using UnityEngine.UI;
 
 public class ButtonPause : MonoBehaviour {
 
-	public bool paused;
-
-
-
-	void Start () {
+	[SerializeField] private bool paused;
+	void Start()
+	{
 		paused = false;
 
 	}
-		
-	void update(){
-
-
-	}
-
 
 	public void Pause(){
         
