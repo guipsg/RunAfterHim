@@ -18,16 +18,25 @@ public class MenuScript : MonoBehaviour {
 
         SceneManager.LoadScene(nextLevel);
     }
-	public void ChangeScene() {
+	public void ChangeScene(string sceneName) {
 
-		StartCoroutine (ChangeLevel ());
+		StartCoroutine (ChangeLevel (sceneName));
 	}
-    public IEnumerator ChangeLevel()
+    public IEnumerator ChangeLevel(string sceneName)
     {
-        yield return new WaitForSeconds(1f);
         float fadeTime = GameObject.Find("Fade").GetComponent<FadeScript>().BeginFade(1);
-        yield return new WaitForSeconds(fadeTime + 1f);
-        SceneManager.LoadScene(nextLevel);
+        yield return new WaitForSeconds(fadeTime);
+        SceneManager.LoadScene(sceneName);
+    }
+    public void EndGame()
+    {
+        StartCoroutine(QuitCoroutine());
+    }
+    IEnumerator QuitCoroutine()
+    {
+        float fadeTime = GameObject.Find("Fade").GetComponent<FadeScript>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+        Application.Quit();
     }
     public void Idle()
     {
