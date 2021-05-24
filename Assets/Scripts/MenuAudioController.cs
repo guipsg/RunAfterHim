@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MenuAudioController : MonoBehaviour
 {
-    public GameAudioController gameAudioController;
+    public GameOptionsController gameOptionsController;
     [SerializeField] private AudioClip hover, click,cancel,special;
     [SerializeField] private AudioSource sfxAudioSource;
     [SerializeField] private AudioSource musicAudioSource;
@@ -17,33 +17,33 @@ public class MenuAudioController : MonoBehaviour
     }
     public void Update()
     {
-        if (gameAudioController == null)
+        if (gameOptionsController == null)
         {
-            gameAudioController = FindObjectOfType<GameAudioController>();
+            gameOptionsController = FindObjectOfType<GameOptionsController>();
         }
-        musicAudioSource.volume = gameAudioController.musicVolume * gameAudioController.masterVolume;
+        musicAudioSource.volume = gameOptionsController.musicVolume * gameOptionsController.masterVolume;
     }
     public void HoverPlay()
     {
         sfxAudioSource.ignoreListenerPause = true;
-        sfxAudioSource.PlayOneShot(hover, (hoverVolume * gameAudioController.sfxVolume) * gameAudioController.masterVolume);
+        sfxAudioSource.PlayOneShot(hover, (hoverVolume * gameOptionsController.sfxVolume) * gameOptionsController.masterVolume);
     }
 
     public void ClickPlay()
     {
         sfxAudioSource.ignoreListenerPause = true;
-        sfxAudioSource.PlayOneShot(click, (clickVolume * gameAudioController.sfxVolume) * gameAudioController.masterVolume);
+        sfxAudioSource.PlayOneShot(click, (clickVolume * gameOptionsController.sfxVolume) * gameOptionsController.masterVolume);
     }
 
     public void CancelPlay()
     {
         sfxAudioSource.ignoreListenerPause = true;
-        sfxAudioSource.PlayOneShot(cancel, (cancelVolume * gameAudioController.sfxVolume) * gameAudioController.masterVolume);
+        sfxAudioSource.PlayOneShot(cancel, (cancelVolume * gameOptionsController.sfxVolume) * gameOptionsController.masterVolume);
     }
 
     public void SpecialPlay()
     {
         sfxAudioSource.ignoreListenerPause = true;
-        sfxAudioSource.PlayOneShot(special, (specialVolume * gameAudioController.sfxVolume) * gameAudioController.masterVolume);
+        sfxAudioSource.PlayOneShot(special, (specialVolume * gameOptionsController.sfxVolume) * gameOptionsController.masterVolume);
     }
 }
