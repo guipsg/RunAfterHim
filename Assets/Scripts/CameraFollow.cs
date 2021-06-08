@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour {
     private void FixedUpdate()
     {
         Vector3 playerPos = player.position + offset;
-        playerPos.y = 0;
+        playerPos.y = offset.y;
 
 		Vector3 moveCam;
 		Vector3 stopCam = new Vector3 (limitX, playerPos.y, playerPos.z);

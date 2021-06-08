@@ -5,9 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ElevadorScript : MonoBehaviour {
-
+    private Management mg;
     [SerializeField] private PlayerMovementPrototype player;
     [SerializeField] private string nextLevel;
+
+    void Start()
+    {
+        mg = GameObject.FindGameObjectWithTag("Manager").GetComponent<Management>();
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -17,6 +22,7 @@ public class ElevadorScript : MonoBehaviour {
                 player.rb.velocity = new Vector2(0f, 0f);
                 player.velocity = 0;
                 StartCoroutine(ChangeLevel());
+                mg.checkPoint = mg.transform.position;
         }
     }
 

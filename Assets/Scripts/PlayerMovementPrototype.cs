@@ -17,6 +17,8 @@ public class PlayerMovementPrototype : MonoBehaviour {
     [SerializeField] private bool _canMove = false;
     private bool grounded = false;
     private bool stopped = false;
+    private bool canDoubleJump = false;
+    private bool canGroundPound = false;
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip jumpClip,enemyDamageClip,buttonClip,crystalClip;
@@ -35,11 +37,8 @@ public class PlayerMovementPrototype : MonoBehaviour {
         get { return _canMove; }
         set { _canMove = value; }
     }
-    public int cont
-    {
-        get { return _cont; }
-        set { _cont = value; }
-    }
+    private int cont;
+
     private void Awake()
     {
         mg = GameObject.FindGameObjectWithTag("Manager").GetComponent<Management>();
@@ -68,6 +67,7 @@ public class PlayerMovementPrototype : MonoBehaviour {
         //PULO
         if (grounded)
         {
+            cont = 0;
             an.SetBool("Jumping", false);
         }
         grounded = grounded = Physics2D.Linecast(feetSensor.transform.position, groundSensor.transform.position, 1 << LayerMask.NameToLayer("Ground")) ||
@@ -79,8 +79,19 @@ public class PlayerMovementPrototype : MonoBehaviour {
         {
             Jump(jumpForce);
         }
+        else if (!grounded && Input.GetButtonDown("Jump") && cont <1 )
+        {
+            if (canDoubleJump)
+            {
+            Jump(jumpForce*0.5f);
+            }
+        }
+        if(Input.GetButtonDown("Cancel") && canGroundPound)
+        {
+            Jump(jumpForce*-1f);
+        }
 
-        
+
     }
 
     public void Flip(){
