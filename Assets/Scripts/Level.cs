@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Level : MonoBehaviour
 {
     public int levelID;
+    public string sceneName;
     public Image[] stars;
     public Color noColor;
     public Color withColor;
@@ -26,6 +27,16 @@ public class Level : MonoBehaviour
             {
                 stars[i].color = noColor;
             }
+        }
+
+        lvlButton.onClick.AddListener(delegate { LoadNewLevel(); });
+
+        void LoadNewLevel()
+        {
+            LevelManager.instance.activeLevelID = levelID;
+            LevelManager.instance.activeLevelPoints = points;
+            LevelManager.instance.activeLevelName = sceneName;
+            LevelManager.instance.StartLevel();
         }
 
     }

@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class Management : MonoBehaviour {
     private static Management instance;
+    public MenuScript menuScript;
+    public GameOptionsController gameOptionsController;
+    public LevelManager levelManager;
     [SerializeField] private AudioSource asd;
     [SerializeField] private Vector2 _checkPoint;
-    [SerializeField] private bool isMenu = false;
-
+    
     public Vector2 checkPoint
     {
         get { return _checkPoint; }
@@ -16,38 +18,22 @@ public class Management : MonoBehaviour {
     // Use this for initialization
     void Awake () {
 
-            if (instance == null)
-            {
-                instance = this;
-                DontDestroyOnLoad(instance);
-
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-
-
-    }
-    private void Update()
-    {
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("MenuScene"))
+        if (instance == null)
         {
-            asd.enabled = false;
-            isMenu = true;
-
+            instance = this;
+            DontDestroyOnLoad(instance);
         }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalScene"))
-        {
-            asd.enabled = false;
-            isMenu = true;
-
-        }
-        if (isMenu)
+        else
         {
             Destroy(gameObject);
         }
+
+        menuScript = GetComponentInChildren<MenuScript>();
+        gameOptionsController = GetComponentInChildren<GameOptionsController>();
+        levelManager = GetComponentInChildren<LevelManager>();
+
     }
+    
 
 
 

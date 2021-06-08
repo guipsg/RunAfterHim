@@ -17,19 +17,13 @@ public class ElevadorScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player")){
-                player.canMove = false;
-                player.Flip();
-                player.rb.velocity = new Vector2(0f, 0f);
-                player.velocity = 0;
-                StartCoroutine(ChangeLevel());
-                mg.checkPoint = mg.transform.position;
+            player.canMove = false;
+            player.Flip();
+            player.rb.velocity = new Vector2(0f, 0f);
+            player.velocity = 0;
+            mg.menuScript.ChangeScene(nextLevel);
+            mg.checkPoint = mg.transform.position;
         }
     }
 
-    IEnumerator ChangeLevel(){
-        yield return new WaitForSeconds(.3f);
-        float fadeTime = GameObject.Find("Fade").GetComponent<FadeScript>().BeginFade(1);
-        yield return new WaitForSeconds(fadeTime);
-        SceneManager.LoadScene(nextLevel);
-    }
 }

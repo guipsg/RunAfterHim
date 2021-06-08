@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour {
     [SerializeField] private Animator an1;
     [SerializeField] private Animator an2;
     [SerializeField] private string nextLevel;
+
     public void StartAnim(){
         an1.SetTrigger("Incoming");
     }

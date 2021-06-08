@@ -17,7 +17,10 @@ public class GameOptionsController : MonoBehaviour
     [SerializeField] private Dropdown resolutionsDropdown;
 
     Resolution[] resolutions;
-
+    private void Awake()
+    {
+        PlayerPrefsSystem.LoadAudioConfig(this);
+    }
 
     private void Start()
     {
@@ -62,19 +65,23 @@ public class GameOptionsController : MonoBehaviour
             resolutionsDropdown.value--;
             resolutionsDropdown.RefreshShownValue();
         }
+
     }
 
     public void ChangeMasterVolume(Slider slider)
     {
         masterVolume = slider.value;
+        PlayerPrefsSystem.SaveAudioConfig(this);
     }
     public void ChangeMusicVolume(Slider slider)
     {
         musicVolume = slider.value;
+        PlayerPrefsSystem.SaveAudioConfig(this);
     }
     public void ChangeSFXVolume(Slider slider)
     {
         sfxVolume = slider.value;
+        PlayerPrefsSystem.SaveAudioConfig(this);
     }
     public void ChangeFullScreen(bool fullscreen)
     {

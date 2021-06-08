@@ -420,7 +420,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 185733726}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -429,7 +429,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartCutscene
+          m_StringArgument: LevelSelect
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &85677061
@@ -500,7 +500,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -516,7 +516,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: SpecialPlay
           m_Mode: 1
@@ -1814,175 +1814,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159358926}
   m_CullTransparentMesh: 1
---- !u!1 &185733723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 185733724}
-  - component: {fileID: 185733727}
-  - component: {fileID: 185733726}
-  - component: {fileID: 185733725}
-  m_Layer: 0
-  m_Name: MenuController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &185733724
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185733723}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2038628837}
-  - {fileID: 409672819}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &185733725
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185733723}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 1
-  BypassListenerEffects: 1
-  BypassReverbZones: 1
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &185733726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185733723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17e9cf7104c8a2844bca6c184bf04e55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  an1: {fileID: 0}
-  an2: {fileID: 0}
-  nextLevel: 
---- !u!114 &185733727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185733723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0fe10f7b32637845bd7c3f354295461, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOptionsController: {fileID: 0}
-  hover: {fileID: 8300000, guid: f81369137952f4c44890da955d8f852b, type: 3}
-  click: {fileID: 8300000, guid: 9467fad1254ca7c4f973b909ae9fe092, type: 3}
-  cancel: {fileID: 8300000, guid: 9359520f939372244b6923665c98e173, type: 3}
-  special: {fileID: 8300000, guid: 6368bbcc6e15616458e91dd31d09a13a, type: 3}
-  sfxAudioSource: {fileID: 185733725}
-  musicAudioSource: {fileID: 2038628836}
-  hoverVolume: 0.5
-  clickVolume: 0.5
-  cancelVolume: 0.5
-  specialVolume: 0.5
 --- !u!1 &208180010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,56 +2265,6 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 0.75}
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &409672817
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 409672819}
-  - component: {fileID: 409672818}
-  m_Layer: 5
-  m_Name: Fade
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &409672818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409672817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a63b7b702af26f349b195ea8bcb94c49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeOutTexture: {fileID: 2800000, guid: 08c1174bd837640dda7f171a3dec8e7f, type: 3}
-  fadeSpeed: 1
---- !u!224 &409672819
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409672817}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 185733724}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 800, y: 450}
-  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &415657374
 GameObject:
@@ -3601,7 +3382,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 185733727}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
         m_MethodName: ClickPlay
         m_Mode: 1
@@ -3630,7 +3411,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -3757,7 +3538,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -3773,7 +3554,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -3921,7 +3702,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -3937,7 +3718,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: CancelPlay
           m_Mode: 1
@@ -4194,7 +3975,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &639479351
 GameObject:
@@ -4426,7 +4207,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -4442,7 +4223,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -11113,7 +10894,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -11129,7 +10910,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -11284,7 +11065,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -11300,7 +11081,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: CancelPlay
           m_Mode: 1
@@ -13406,7 +13187,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 185733727}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
         m_MethodName: ClickPlay
         m_Mode: 1
@@ -13435,7 +13216,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -14142,7 +13923,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -14158,7 +13939,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -14246,7 +14027,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 185733726}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: EndGame
         m_Mode: 1
@@ -14662,7 +14443,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -14678,7 +14459,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -14766,7 +14547,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 185733726}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: EndGame
         m_Mode: 1
@@ -18103,7 +17884,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 185733727}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
         m_MethodName: ClickPlay
         m_Mode: 1
@@ -18132,7 +17913,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -18367,7 +18148,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -18383,7 +18164,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: CancelPlay
           m_Mode: 1
@@ -23748,7 +23529,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1670666323
 GameObject:
@@ -23786,6 +23567,125 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1690271627
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9098891729878233751, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891729878233751, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891729878233751, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891729966006578, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891729966006578, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891729966006578, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211681, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211682, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d24ef38b1acd0ed4895222d17f6f275a, type: 3}
+    - target: {fileID: 9098891730013211682, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: BypassEffects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730013211687, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: MANAGER
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730545772082, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098891730545772082, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 99d5aaf2a25da2240a8c0c8b922cf6ba, type: 3}
 --- !u!1 &1713730219
 GameObject:
   m_ObjectHideFlags: 0
@@ -24044,7 +23944,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -24060,7 +23960,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -24510,7 +24410,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -24526,7 +24426,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -26974,7 +26874,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -26990,7 +26890,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -28482,133 +28382,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &2038628835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2038628837}
-  - component: {fileID: 2038628836}
-  m_Layer: 0
-  m_Name: Music
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &2038628836
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038628835}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d24ef38b1acd0ed4895222d17f6f275a, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 119
-  DopplerLevel: 3.17
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.53333336
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.71
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &2038628837
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038628835}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 185733724}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2059026439
 GameObject:
   m_ObjectHideFlags: 0
@@ -28669,7 +28442,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: HoverPlay
           m_Mode: 1
@@ -28685,7 +28458,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 185733727}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuAudioController, Assembly-CSharp
           m_MethodName: ClickPlay
           m_Mode: 1
@@ -28773,7 +28546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 185733726}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: EndGame
         m_Mode: 1
