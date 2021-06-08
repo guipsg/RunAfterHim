@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class LevelSelector : MonoBehaviour
 {
-    public List<Level> levels;
     [SerializeField] private LevelManager lvlManager;
     [SerializeField] private Animator[] worldAnim;
     public int UnlockedLevels;
@@ -14,9 +13,8 @@ public class LevelSelector : MonoBehaviour
     {
         lvlManager = FindObjectOfType<LevelManager>();
         PlayerPrefsSystem.LoadLevelProgress(this);
-        foreach (Level lvl in levels)
+        foreach (Level lvl in lvlManager.levels)
         {
-            lvl.levelID = levels.IndexOf(lvl);
             UnlockableButons.Add(lvl.lvlButton);
             foreach (Button button in UnlockableButons)
             {
