@@ -42,6 +42,11 @@ public class PlayerPrefsSystem : MonoBehaviour
             gameOptionsController.sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
             gameOptionsController.musicVolume = PlayerPrefs.GetFloat("MusicVolume");
         }
+        else
+        {
+            SaveAudioConfig(gameOptionsController);
+
+        }
     }
 
     public static void SaveLvlPontuation(int levelID, int points)
