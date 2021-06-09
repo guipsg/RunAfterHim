@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Level : MonoBehaviour
 {
     public int levelID;
+    public string levelName;
     public Image[] stars;
     public Color noColor;
     public Color withColor;
@@ -13,9 +14,9 @@ public class Level : MonoBehaviour
     public Button lvlButton;
     [SerializeField] private int[] pointLimit;
 
-    private void Start()
+    private void Awake()
     {
-        lvlButton = GetComponent<Button>();
+        PlayerPrefsSystem.LoadLevelProgress(this);
         for (int i = 0; i < stars.Length; i++)
         {
             if (points >= pointLimit[i])
@@ -27,6 +28,7 @@ public class Level : MonoBehaviour
                 stars[i].color = noColor;
             }
         }
-
     }
+
+    
 }

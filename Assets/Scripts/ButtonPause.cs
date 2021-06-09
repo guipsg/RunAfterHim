@@ -7,25 +7,27 @@ using UnityEngine.UI;
 public class ButtonPause : MonoBehaviour {
 
 	[SerializeField] private bool paused;
-	void Start()
+    [SerializeField] private GameObject pausePanel;
+    void Start()
 	{
 		paused = false;
 
 	}
 
-	public void Pause(){
-        
-		paused = !paused;
-		
+    public void PauseGame()
+    {
+        paused = true;
+        pausePanel.SetActive(true);
+        AudioListener.pause = true;
+        Time.timeScale = 0;
+    }
 
-		if(paused) {
-            
-			Time.timeScale = 0;
-		}
-
-		else if(!paused){
-			Time.timeScale = 1;
-		}
-	}
+    public void ReturnGame()
+    {
+        paused = false;
+        pausePanel.SetActive(false);
+        AudioListener.pause = false;
+        Time.timeScale = 1;
+    }
 
 }

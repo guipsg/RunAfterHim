@@ -8,6 +8,10 @@ public class ColetavelScript : MonoBehaviour {
     [SerializeField] private PontosScript pt;
     [SerializeField] private GameObject particle;
 
+    private void Start()
+    {
+        pt = FindObjectOfType<PontosScript>();
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Item"))

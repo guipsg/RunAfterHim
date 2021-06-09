@@ -105,7 +105,7 @@ public class PlayerMovementPrototype : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyHead"))
         {
-            audioSource.PlayOneShot(enemyDamageClip, 0.8f);
+            audioSource.PlayOneShot(enemyDamageClip, PlayerPrefs.GetFloat("SfxVolume"));
         }
 
     }
@@ -114,11 +114,11 @@ public class PlayerMovementPrototype : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Button"))
         {
-            audioSource.PlayOneShot(buttonClip,0.8f);
+            audioSource.PlayOneShot(buttonClip,PlayerPrefs.GetFloat("SfxVolume"));
         }
         if (collision.gameObject.CompareTag("Item"))
         {
-            audioSource.PlayOneShot(crystalClip, 0.5f);
+            audioSource.PlayOneShot(crystalClip, PlayerPrefs.GetFloat("SfxVolume") * 0.2f);
         }
     }
     public void Jump(float jumpheight)
@@ -130,5 +130,5 @@ public class PlayerMovementPrototype : MonoBehaviour {
         an.SetBool("Jumping",true);
         JumpSfx();
     }
-    public void JumpSfx() { audioSource.PlayOneShot(jumpClip, 1f); }
+    public void JumpSfx() { audioSource.PlayOneShot(jumpClip, PlayerPrefs.GetFloat("SfxVolume")); }
 }

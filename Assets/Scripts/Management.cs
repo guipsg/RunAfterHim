@@ -14,21 +14,21 @@ public class Management : MonoBehaviour {
         set { _checkPoint = value; }
     }
     // Use this for initialization
-    void Awake () {
+    //void Awake () {
 
-            if (instance == null)
-            {
-                instance = this;
-                DontDestroyOnLoad(instance);
+    //        if (instance == null)
+    //        {
+    //            instance = this;
+    //            DontDestroyOnLoad(instance);
 
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+    //        }
+    //        else
+    //        {
+    //            Destroy(gameObject);
+    //        }
 
 
-    }
+    //}
     private void Update()
     {
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("MenuScene"))

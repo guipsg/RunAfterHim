@@ -11,13 +11,61 @@ public class PlayerPrefsSystem : MonoBehaviour
     }
     public static void SaveLevelProgress(Level level)
     {
-        PlayerPrefs.SetInt("unlockedLevel", level.levelID);
+        PlayerPrefs.SetInt("Level"+level.levelID+"Points", level.points);
     }
     public static void LoadLevelProgress(LevelSelector levelSelector)
     {
         if (PlayerPrefs.HasKey("unlockedLevel"))
         {
             levelSelector.UnlockedLevels = PlayerPrefs.GetInt("unlockedLevel");
+        }
+    }
+    public static void LoadLevelProgress(Level level)
+    {
+        if (PlayerPrefs.HasKey("Level" + level.levelID + "Points"))
+        {
+            level.points = PlayerPrefs.GetInt("Level" + level.levelID + "Points");
+        }
+    }
+
+    public static void SaveAudioConfig(GameOptionsController gameOptionsController)
+    {
+        PlayerPrefs.SetFloat("MasterVolume", gameOptionsController.masterVolume);
+        PlayerPrefs.SetFloat("SfxVolume", gameOptionsController.sfxVolume);
+        PlayerPrefs.SetFloat("MusicVolume", gameOptionsController.musicVolume);
+    }
+    public static void LoadAudioConfig(GameOptionsController gameOptionsController)
+    {
+        if (PlayerPrefs.HasKey("MasterVolume"))
+        {
+            gameOptionsController.masterVolume = PlayerPrefs.GetFloat("MasterVolume");
+            gameOptionsController.sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
+            gameOptionsController.musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        }
+    }
+
+    public static void SaveLvlPontuation(int levelID, int points)
+    {
+
+        if (PlayerPrefs.HasKey("Level" + levelID + "Points"))
+        {
+            if (PlayerPrefs.GetInt("Level" + levelID + "Points") < points)
+            {
+                PlayerPrefs.SetInt("Level" + levelID + "Points", points);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Level" + levelID + "Points", points);
+        }
+
+
+    }
+    public static void UnlockLevel(int nextLevelID)
+    {
+        if (PlayerPrefs.GetInt("unlockedLevel") < nextLevelID)
+        {
+            PlayerPrefs.SetInt("unlockedLevel", nextLevelID);
         }
     }
 }

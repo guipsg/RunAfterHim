@@ -8,6 +8,7 @@ public class AudioSourceGroup : MonoBehaviour
     public void PlayFromNextSource(AudioClip clip) {
         AudioSource nextSource = typingSources[nextTypeSource];
         nextSource.clip = clip;
+        nextSource.volume = PlayerPrefs.GetFloat("SfxVolume");
         nextSource.Play();
         nextTypeSource = (nextTypeSource + 1) % typingSources.Length;
     }

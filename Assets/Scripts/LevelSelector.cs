@@ -8,31 +8,29 @@ public class LevelSelector : MonoBehaviour
     [SerializeField] private LevelManager lvlManager;
     [SerializeField] private Animator[] worldAnim;
     public int UnlockedLevels;
-    [SerializeField] private List<Button> UnlockableButons;
+    
     private void Start()
     {
         lvlManager = FindObjectOfType<LevelManager>();
         PlayerPrefsSystem.LoadLevelProgress(this);
-        foreach (Level lvl in lvlManager.levels)
+        if (UnlockedLevels < 3)
         {
-            UnlockableButons.Add(lvl.lvlButton);
-            foreach (Button button in UnlockableButons)
-            {
-                if (UnlockableButons.IndexOf(button) > UnlockedLevels)
-                {
-                    button.interactable = false;
-                }
-                else if (UnlockableButons.IndexOf(button) <= UnlockedLevels)
-                {
-                    button.interactable = true;
-                }
-            }
+            worldAnim[0].gameObject.SetActive(true);
+        }
+        if (UnlockedLevels >= 3 && UnlockedLevels < 6)
+        {
+            worldAnim[1].gameObject.SetActive(true);
+        }
+        if (UnlockedLevels >= 6 && UnlockedLevels < 9)
+        {
+            worldAnim[2].gameObject.SetActive(true);
+        }
+        if (UnlockedLevels >= 10 && UnlockedLevels < 12)
+        {
+            worldAnim[3].gameObject.SetActive(true);
         }
     }
-    private void Update()
-    {
-        
-    }
+
     public void NextWorld(int worldID)
     {
         StartCoroutine(NextWorldDeactivate(worldAnim[worldID].gameObject, 0.5f));

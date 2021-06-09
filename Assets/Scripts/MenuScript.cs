@@ -15,8 +15,14 @@ public class MenuScript : MonoBehaviour {
         an2.SetBool("Grounded", true);
     }
     public void PlayGame() {
-
-        SceneManager.LoadScene(nextLevel);
+        if (PlayerPrefs.GetInt("unlockedLevel") < 1)
+        {
+            StartCoroutine(ChangeLevel("StartCutscene"));
+        }
+        else
+        {
+            StartCoroutine(ChangeLevel("LevelSelect"));
+        }
     }
 	public void ChangeScene(string sceneName) {
 
@@ -37,6 +43,18 @@ public class MenuScript : MonoBehaviour {
         float fadeTime = GameObject.Find("Fade").GetComponent<FadeScript>().BeginFade(1);
         yield return new WaitForSeconds(fadeTime);
         Application.Quit();
+    }
+    public void RestartLevel()
+    {
+        StartCoroutine(Restart());
+
+    }
+	public IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(.3f);
+        float fadeTime = GameObject.Find("Fade").GetComponent<FadeScript>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void Idle()
     {

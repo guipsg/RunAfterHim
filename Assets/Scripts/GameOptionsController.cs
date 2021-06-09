@@ -15,10 +15,20 @@ public class GameOptionsController : MonoBehaviour
     public bool isFullscreen;
 
     [SerializeField] private Dropdown resolutionsDropdown;
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider musicSlider;
+
 
     Resolution[] resolutions;
 
-
+    private void Awake()
+    {
+        PlayerPrefsSystem.LoadAudioConfig(this);
+        masterSlider.value = masterVolume;
+        sfxSlider.value = sfxVolume;
+        musicSlider.value = musicVolume;
+    }
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -67,14 +77,17 @@ public class GameOptionsController : MonoBehaviour
     public void ChangeMasterVolume(Slider slider)
     {
         masterVolume = slider.value;
+        PlayerPrefsSystem.SaveAudioConfig(this);
     }
     public void ChangeMusicVolume(Slider slider)
     {
         musicVolume = slider.value;
+        PlayerPrefsSystem.SaveAudioConfig(this);
     }
     public void ChangeSFXVolume(Slider slider)
     {
         sfxVolume = slider.value;
+        PlayerPrefsSystem.SaveAudioConfig(this);
     }
     public void ChangeFullScreen(bool fullscreen)
     {
