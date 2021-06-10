@@ -17,11 +17,11 @@ public class PlayerMovementPrototype : MonoBehaviour {
     [SerializeField] private bool _canMove = false;
     private bool grounded = false;
     private bool stopped = false;
-    private bool canDoubleJump = false;
-    private bool canGroundPound = false;
+    [SerializeField] private bool canDoubleJump = false;
+    [SerializeField] private bool canGroundPound = false;
 
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip jumpClip,enemyDamageClip,buttonClip,crystalClip;
+    [SerializeField] private AudioClip jumpClip,enemyDamageClip,buttonClip,crystalClip,footstepClip;
     public float velocity
     {
         get { return _velocity; }
@@ -42,12 +42,13 @@ public class PlayerMovementPrototype : MonoBehaviour {
     private void Awake()
     {
         mg = GameObject.FindGameObjectWithTag("Manager").GetComponent<Management>();
-
+        
         transform.position = mg.checkPoint;
     }
 
     void Update () {
-		var em = runningParticle.emission;
+        audioSource.volume = PlayerPrefs.GetFloat("SfxVolume") * PlayerPrefs.GetFloat("MasterVolume");
+        var em = runningParticle.emission;
         //CORRIDA
         if (canMove)
         {
@@ -77,18 +78,18 @@ public class PlayerMovementPrototype : MonoBehaviour {
 
         if (grounded && Input.GetButtonDown("Jump"))
         {
-            Jump(jumpForce);
+            Jump(jumpForce,jumpClip);
         }
         else if (!grounded && Input.GetButtonDown("Jump") && cont <1 )
         {
             if (canDoubleJump)
             {
-            Jump(jumpForce*0.5f);
+            Jump(jumpForce*0.75f, jumpClip);
             }
         }
         if(Input.GetButtonDown("Cancel") && canGroundPound)
         {
-            Jump(jumpForce*-1f);
+            Jump(jumpForce*-1f, jumpClip);
         }
 
 
@@ -105,7 +106,7 @@ public class PlayerMovementPrototype : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyHead"))
         {
-            audioSource.PlayOneShot(enemyDamageClip, PlayerPrefs.GetFloat("SfxVolume"));
+            audioSource.PlayOneShot(enemyDamageClip);
         }
 
     }
@@ -114,21 +115,36 @@ public class PlayerMovementPrototype : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Button"))
         {
-            audioSource.PlayOneShot(buttonClip,PlayerPrefs.GetFloat("SfxVolume"));
+            audioSource.pitch = 1;
+            audioSource.PlayOneShot(buttonClip);
         }
         if (collision.gameObject.CompareTag("Item"))
         {
-            audioSource.PlayOneShot(crystalClip, PlayerPrefs.GetFloat("SfxVolume") * 0.2f);
+            audioSource.pitch = 1;
+            audioSource.PlayOneShot(crystalClip);
         }
     }
-    public void Jump(float jumpheight)
+    public void Jump(float jumpheight,AudioClip clip)
     {
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up * jumpheight);
         cont += 1;
         an.SetTrigger("Jumped");
         an.SetBool("Jumping",true);
-        JumpSfx();
+        JumpSfx(clip);
     }
-    public void JumpSfx() { audioSource.PlayOneShot(jumpClip, PlayerPrefs.GetFloat("SfxVolume")); }
+    public void JumpSfx(AudioClip clip) 
+    { 
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.PlayOneShot(clip); 
+    }
+    public void FootstepSFX()
+    {
+        if (grounded)
+        {
+            audioSource.pitch = Random.Range(0.9f, 1.1f);
+            audioSource.PlayOneShot(footstepClip);
+        }
+        
+    }
 }

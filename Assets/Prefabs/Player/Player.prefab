@@ -102,7 +102,8 @@ MonoBehaviour:
   jumpClip: {fileID: 8300000, guid: 3cb0aa6fc3f5b704b9ee6187fd1db9d2, type: 3}
   enemyDamageClip: {fileID: 8300000, guid: 1d81fdaafe10754479b84e5bc5deaed8, type: 3}
   buttonClip: {fileID: 8300000, guid: ae117c868ab814a4ea052c8ca1030366, type: 3}
-  crystalClip: {fileID: 8300000, guid: f55d2398cfa8ef941ad4154af8977ada, type: 3}
+  crystalClip: {fileID: 8300000, guid: 35dc82cc45678584ca06d08e8e6d548d, type: 3}
+  footstepClip: {fileID: 8300000, guid: 5b7514dcae451c347a8a9cdd6b501f45, type: 3}
 --- !u!50 &3380396672511318855
 Rigidbody2D:
   serializedVersion: 4
@@ -234,7 +235,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.504
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

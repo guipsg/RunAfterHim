@@ -74,19 +74,19 @@ public class GameOptionsController : MonoBehaviour
         }
     }
 
-    public void ChangeMasterVolume(Slider slider)
+    public void ChangeMasterVolume(float value)
     {
-        masterVolume = slider.value;
+        masterVolume = value;
         PlayerPrefsSystem.SaveAudioConfig(this);
     }
-    public void ChangeMusicVolume(Slider slider)
+    public void ChangeMusicVolume(float value)
     {
-        musicVolume = slider.value;
+        musicVolume = value;
         PlayerPrefsSystem.SaveAudioConfig(this);
     }
-    public void ChangeSFXVolume(Slider slider)
+    public void ChangeSFXVolume(float value)
     {
-        sfxVolume = slider.value;
+        sfxVolume = value;
         PlayerPrefsSystem.SaveAudioConfig(this);
     }
     public void ChangeFullScreen(bool fullscreen)

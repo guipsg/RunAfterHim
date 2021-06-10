@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.37989575, y: 0.38700002}
   m_AnchorMax: {x: 0.37989575, y: 0.38700002}
-  m_AnchoredPosition: {x: 6, y: -43.469788}
+  m_AnchoredPosition: {x: 6, y: 3.5302124}
   m_SizeDelta: {x: 425.994, y: 93.1784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1326212880313292055
@@ -347,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3866666, y: 0.5}
   m_AnchorMax: {x: 0.3866666, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: -53.009766}
+  m_AnchoredPosition: {x: -7, y: -6.0097656}
   m_SizeDelta: {x: 425.994, y: 93.1784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1326212880648658094
@@ -519,7 +519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.37989575, y: 0.289}
   m_AnchorMax: {x: 0.37989575, y: 0.289}
-  m_AnchoredPosition: {x: 6, y: -46.009766}
+  m_AnchoredPosition: {x: 6, y: 0.9902344}
   m_SizeDelta: {x: 425.994, y: 93.1784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1326212881256361619
@@ -614,7 +614,7 @@ RectTransform:
   m_Children:
   - {fileID: 1326212882216301287}
   m_Father: {fileID: 1326212881959249461}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6266252, y: 0.72862965}
   m_AnchorMax: {x: 0.6266252, y: 0.72862965}
@@ -722,7 +722,7 @@ RectTransform:
   m_LocalScale: {x: 3.2900138, y: 3.2900138, z: 3.2900138}
   m_Children: []
   m_Father: {fileID: 1326212881959249461}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6266252, y: 0.39900002}
   m_AnchorMax: {x: 0.6266252, y: 0.39900002}
@@ -892,7 +892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3866666, y: 0.86931133}
   m_AnchorMax: {x: 0.3866666, y: 0.86931133}
-  m_AnchoredPosition: {x: -1, y: -44}
+  m_AnchoredPosition: {x: -1, y: 3}
   m_SizeDelta: {x: 505.5286, y: 62.971497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1326212881809983638
@@ -987,7 +987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3866666, y: 0.7387408}
   m_AnchorMax: {x: 0.3866666, y: 0.7387408}
-  m_AnchoredPosition: {x: -8, y: -52.009766}
+  m_AnchoredPosition: {x: -8, y: -5.0097656}
   m_SizeDelta: {x: 425.994, y: 165.2021}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1326212881828724941
@@ -1085,7 +1085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3866666, y: 0.624}
   m_AnchorMax: {x: 0.3866666, y: 0.624}
-  m_AnchoredPosition: {x: -7, y: -42.009766}
+  m_AnchoredPosition: {x: -7, y: 4.9902344}
   m_SizeDelta: {x: 425.994, y: 93.1784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1326212881868937542
@@ -1182,6 +1182,7 @@ RectTransform:
   - {fileID: 1326212880648658088}
   - {fileID: 1326212880313292049}
   - {fileID: 1326212881256361613}
+  - {fileID: 2463321817722848431}
   - {fileID: 1326212881523224282}
   - {fileID: 1326212881303524906}
   m_Father: {fileID: 0}
@@ -1430,7 +1431,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1326212882020437649}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1761,3 +1762,100 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8943329299993389677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2463321817722848431}
+  - component: {fileID: 5506311172851233460}
+  - component: {fileID: 5848003122889937709}
+  - component: {fileID: 3425147172770143267}
+  m_Layer: 5
+  m_Name: Text (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2463321817722848431
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8943329299993389677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1326212881959249461}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.37989575, y: 0.1562963}
+  m_AnchorMax: {x: 0.37989575, y: 0.1562963}
+  m_AnchoredPosition: {x: 6, y: 1}
+  m_SizeDelta: {x: 425.994, y: 93.1784}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5506311172851233460
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8943329299993389677}
+  m_CullTransparentMesh: 1
+--- !u!114 &5848003122889937709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8943329299993389677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e30cd22b7311cbc44a421fdc6118ad56, type: 3}
+    m_FontSize: 47
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 108
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 'GABRIEL LARA
+
+    music composition'
+--- !u!114 &3425147172770143267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8943329299993389677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1

@@ -13,7 +13,7 @@ public class Inimigo : MonoBehaviour {
 
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<PlayerMovementPrototype>().Jump(jumpHeight);
+            col.gameObject.GetComponent<PlayerMovementPrototype>().Jump(jumpHeight,null);
             Destroy(parent, 0.1f);
             Instantiate(deathParticle, transform.position, transform.rotation);
         }

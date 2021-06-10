@@ -25454,10 +25454,10 @@ MonoBehaviour:
   - {r: 0.5686275, g: 0, b: 0.20392159, a: 1}
   - {r: 0.6037736, g: 0, b: 0.21563347, a: 1}
   typingClip:
-  - {fileID: 8300000, guid: 816ffca42227c8644896b8dea841a7aa, type: 3}
-  - {fileID: 8300000, guid: 816ffca42227c8644896b8dea841a7aa, type: 3}
-  - {fileID: 8300000, guid: 802db6195e78851438aa36b238481827, type: 3}
-  - {fileID: 8300000, guid: 802db6195e78851438aa36b238481827, type: 3}
+  - {fileID: 8300000, guid: fc96fdc2b113dfe4a8e096215cd5cdbc, type: 3}
+  - {fileID: 8300000, guid: fc96fdc2b113dfe4a8e096215cd5cdbc, type: 3}
+  - {fileID: 8300000, guid: b4d063dbde6543a48b187858c2cf4eda, type: 3}
+  - {fileID: 8300000, guid: b4d063dbde6543a48b187858c2cf4eda, type: 3}
   OnFinishDialogueEvent:
     m_PersistentCalls:
       m_Calls:

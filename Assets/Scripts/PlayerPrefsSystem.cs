@@ -36,17 +36,9 @@ public class PlayerPrefsSystem : MonoBehaviour
     }
     public static void LoadAudioConfig(GameOptionsController gameOptionsController)
     {
-        if (PlayerPrefs.HasKey("MasterVolume"))
-        {
-            gameOptionsController.masterVolume = PlayerPrefs.GetFloat("MasterVolume");
-            gameOptionsController.sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
-            gameOptionsController.musicVolume = PlayerPrefs.GetFloat("MusicVolume");
-        }
-        else
-        {
-            SaveAudioConfig(gameOptionsController);
-
-        }
+         gameOptionsController.masterVolume = PlayerPrefs.GetFloat("MasterVolume");
+         gameOptionsController.sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
+         gameOptionsController.musicVolume = PlayerPrefs.GetFloat("MusicVolume");
     }
 
     public static void SaveLvlPontuation(int levelID, int points)

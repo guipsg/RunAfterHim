@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 600
   an: {fileID: 95514019572562150}
+  audio: {fileID: 8300000, guid: dfaf41239f4d4964cb2deefd37c2d1ad, type: 3}
 --- !u!95 &95514019572562150
 Animator:
   serializedVersion: 3
