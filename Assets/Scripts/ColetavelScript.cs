@@ -7,6 +7,7 @@ public class ColetavelScript : MonoBehaviour {
 
     [SerializeField] private PontosScript pt;
     [SerializeField] private GameObject particle;
+    [SerializeField] private List<GameObject> starsCollectables;
 
     private void Start()
     {
@@ -19,6 +20,13 @@ public class ColetavelScript : MonoBehaviour {
             Destroy(col.gameObject);
 			Instantiate (particle, col.transform.position, col.transform.rotation);
             pt.points += 1000;
+            foreach (GameObject star in starsCollectables)
+            {
+                if (star == col.gameObject)
+                {
+                    pt.UnlockStar(starsCollectables.IndexOf(star));
+                }
+            }
         }
     }
 }

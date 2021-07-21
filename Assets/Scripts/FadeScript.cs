@@ -37,4 +37,12 @@ public class FadeScript : MonoBehaviour {
         BeginFade(-1);
     }
 
+    public void DoFadeIn()
+    {
+        BeginFade(1);
+    }
+    public void DoFadeOut()
+    {
+        BeginFade(-1);
+    }
 }

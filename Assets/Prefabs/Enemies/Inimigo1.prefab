@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 61282597420859480}
   - component: {fileID: 114430640721196610}
   - component: {fileID: 95812686822205708}
+  - component: {fileID: 980881311335321109}
   m_Layer: 0
   m_Name: Inimigo1
   m_TagString: Enemy
@@ -147,6 +148,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &980881311335321109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260354542250792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed93f66bd91da847b1868436a8f35e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  h: {fileID: 0}
 --- !u!1 &1890876975242390
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +237,7 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.03, y: 0.2047169}
       - {x: -0.16, y: 0.115208454}
-      - {x: -0.12, y: -0.14739503}
+      - {x: -0.01, y: -0.14739503}
       - {x: 0.13, y: -0.10061372}
       - {x: 0.5, y: 0.12}
 --- !u!50 &1239554257564645603

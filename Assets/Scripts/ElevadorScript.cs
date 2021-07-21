@@ -24,13 +24,17 @@ public class ElevadorScript : MonoBehaviour {
             player.Flip();
             player.rb.velocity = new Vector2(0f, 0f);
             player.velocity = 0;
-            StartCoroutine(ChangeLevel());
+            pontosScript.ShowLevelComplete();
             mg.checkPoint = mg.transform.position;
             PlayerPrefsSystem.SaveLvlPontuation(levelID,pontosScript.points);
             PlayerPrefsSystem.UnlockLevel(levelID + 1);
+            Time.timeScale = 1f;
         }
     }
-
+    public void NextLevel()
+    {
+        StartCoroutine(ChangeLevel());
+    }
     IEnumerator ChangeLevel(){
         yield return new WaitForSeconds(.3f);
         float fadeTime = GameObject.Find("Fade").GetComponent<FadeScript>().BeginFade(1);

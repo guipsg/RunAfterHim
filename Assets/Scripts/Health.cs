@@ -7,6 +7,7 @@ public class Health : MonoBehaviour {
 
     [SerializeField] private int _health = 2;
     [SerializeField] private RespawnScene rs;
+    [SerializeField] private PontosScript ps;
     public int health
     {
         get { return _health; }
@@ -16,8 +17,8 @@ public class Health : MonoBehaviour {
         if (health <= 0)
 	    {
             Destroy(gameObject);
-            rs.RespawnPlayer();
-	    }
+            ps.ShowGameOver();
+        }
 
     }
 }
